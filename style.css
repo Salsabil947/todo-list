@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(download\ \(2\).jpg) no-repeat center center/cover;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    /* background: rgba(233, 217, 217, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.todo-app h1{
+    font-size: 2rem;
+}
+
+.stat-container{
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.details{
+    width:100%;
+}
+
+.details h3{
+    color:#fff;
+}
+
+#progressbar{
+    width: 100%;
+    height: 7px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.18);
+    position: relative;
+    margin-top: 15px;
+}
+
+#progress {
+    height: 100%;
+    width: 50%;
+    background: #debabf;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+#numbers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #c9adb1;
+    font-weight: bold;
+    border-radius: 20%;
+    margin-top: 5px;
+    font-size: 1,1rem;
+}
+.input-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-area input{
+    flex: 1;
+    width: 80%;
+    padding: 10px 17px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1,1rem;
+    background-color: rgb(241, 225, 232);
+}
+
+.input-area input::placeholder{
+    color: #bcbcbc;
+}
+
+.input-area button{
+    width: 38px;
+    height: 38px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 30%;
+    background-color: #a98d91;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.input-area button:hover{
+    transform: scale(1.1);
+    background-color: #725c5f;
+}
+
+.todo-container{
+width: 100%;    
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#taskList{
+    width: 100%;
+}
+
+#taskList li{
+    background-color: rgba(184, 149, 149, 0.2);
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    list-style: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: box-shadow 0.2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+#taskList li:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#taskList li .checkbox{
+    min-width: 20px;
+    height: 20px;
+    outline: none;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: line-through;
+    color: #d1d1d1;
+    background: transparent;
+}
+
+#taskList li .checkbox:checked{
+    background: #725c5f;
+    transform: scale(1.1); 
+}
+
+/* #taskList li .checkbox:checked::before{
+    content: '\f00c';
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+} */
+
+#taskList li span{
+    flex: 1;
+    margin-left: 10px;
+    word-break: break-word;
+}
+
+#taskList li.completed span{
+    text-decoration: 2px line-through #3d393952;
+    color: #d1d1d1;
+}
+
+.task-buttons{
+    display: flex;
+    gap: 10px;
+    margin-right: auto;
+}
+.task-buttons button{
+    border: none;
+    border-radius: 30%;
+    width: 30px;
+    height: 30px;
+    background: #a98d91;
+    color: #fff;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-buttons button:hover{
+    background: #725c5f;
+    transform: scale(1.1);
+}
+
+.task-buttons .edit-button{
+    background: #50383a81;
+}
+
+.empty-image{
+    width: 150px;
+    margin-top: 20px;
+    opacity: 0.7;
+    animation: float 3s ease-in-out infinite;
+}
